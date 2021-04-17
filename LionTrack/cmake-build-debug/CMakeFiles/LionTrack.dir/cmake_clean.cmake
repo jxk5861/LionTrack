@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/LionTrack.dir/main.cpp.o"
-  "LionTrack"
+  "CMakeFiles/LionTrack.dir/main.cpp.obj"
+  "LionTrack.exe"
+  "LionTrack.exe.manifest"
+  "LionTrack.lib"
   "LionTrack.pdb"
 )
 
