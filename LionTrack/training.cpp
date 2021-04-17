@@ -33,7 +33,7 @@ int main() {
 
     // ../dataset/Users.Jacob.1.jpg
     // Get images and label data
-    vector<Rect> dataset_faces;
+    vector<Mat> dataset_faces;
     vector<int> dataset_face_labels;
 
     map<string, int> name_to_id;
@@ -50,10 +50,10 @@ int main() {
         cout << image_path << endl;
         name_start = image_path.find_last_of('/');
         cout << "File name: " << image_path << endl;
-        image_path = image_path.substr(name_start);
+        string image_path_end = image_path.substr(name_start);
 
-        name_start = image_path.find_first_of('.');
-        string face_id = image_path.substr(name_start + 1, image_path.find_first_of('.', name_start + 1) - name_start - 1);
+        name_start = image_path_end.find_first_of('.');
+        string face_id = image_path_end.substr(name_start + 1, image_path_end.find_first_of('.', name_start + 1) - name_start - 1);
 
         if(name_to_id.find(face_id) == name_to_id.end()){
             name_to_id[face_id] = current_id;
@@ -61,18 +61,22 @@ int main() {
             current_id++;
         }
 
-        Mat img = imread(image_path, IMREAD_GRAYSCALE);
-        vector<Rect> faces;
-        faceCascade.detectMultiScale(img, faces);
-
-        for(Rect face : faces){
-            dataset_faces.push_back(face);
-            dataset_face_labels.push_back(name_to_id[face_id]);
-        }
+        Mat face = imread(image_path, IMREAD_GRAYSCALE);
+//        cout << face.size().width << " " << face.size().height << endl;
+        dataset_faces.push_back(face);
+        dataset_face_labels.push_back(name_to_id[face_id]);
+//        vector<Rect> faces;
+//        faceCascade.detectMultiScale(img, faces);
+//
+//        for(Rect face : faces){
+//            dataset_faces.push_back(face);
+//            dataset_face_labels.push_back(name_to_id[face_id]);
+//        }
     }
+//    cout << dataset_faces.size() << " " << dataset_face_labels.size() << endl;
 
     recognizer->train(dataset_faces, dataset_face_labels);
-    recognizer->write("trainer/trainer.yml");
+    recognizer->write("../trainer/trainer.yml");
 
     printf("%lu faces trained\n", dataset_faces.size());
 
