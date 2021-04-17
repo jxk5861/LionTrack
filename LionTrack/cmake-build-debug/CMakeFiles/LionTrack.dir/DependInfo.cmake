@@ -4,12 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/main.cpp" "C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug/CMakeFiles/LionTrack.dir/main.cpp.obj"
+  "/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/main.cpp" "/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/CMakeFiles/LionTrack.dir/main.cpp.o"
   )
-set(CMAKE_CXX_COMPILER_ID "MSVC")
+set(CMAKE_CXX_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "/usr/local/Cellar/opencv/4.5.2/include/opencv4"
   )
 
 # Targets to which this target links.

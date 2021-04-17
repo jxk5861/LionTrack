@@ -4,89 +4,101 @@
 	<Project>
 		<Option title="LionTrack"/>
 		<Option makefile_is_custom="1"/>
-		<Option compiler="msvc8"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
+				<Option working_dir="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 all"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="LionTrack">
-				<Option output="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug/LionTrack.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\ATLMFC\include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 LionTrack"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="LionTrack/fast">
-				<Option output="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug/LionTrack.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="msvc8"/>
-				<Compiler>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\ATLMFC\include"/>
-					<Add directory="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610\include"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"/>
-					<Add directory="C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 LionTrack/fast"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 edit_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
+				<Option working_dir="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
-					<DistClean command="nmake /NOLOGO /f &quot;C:\Users\Kevin Wang\Documents\College\finalproject-team-not-7\LionTrack\cmake-build-debug\Makefile&quot; VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LionTrack">
+				<Option output="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/LionTrack" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/opencv/4.5.2/include/opencv4"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 LionTrack"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="LionTrack/fast">
+				<Option output="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/LionTrack" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/Cellar/opencv/4.5.2/include/opencv4"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 LionTrack/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/main.cpp">
+		<Unit filename="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/main.cpp">
 			<Option target="LionTrack"/>
 		</Unit>
-		<Unit filename="C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/CMakeLists.txt">
+		<Unit filename="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/../../../../../usr/local/lib/cmake/opencv4/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/../../../../../usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
+		</Unit>
+		<Unit filename="/Users/jacobkarabin/CLionProjects/finalproject-team-not-7/LionTrack/../../../../../usr/local/lib/cmake/opencv4/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\opencv4\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
