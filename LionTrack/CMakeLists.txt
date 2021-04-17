@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.19)
 project(LionTrack)
 
 set(CMAKE_CXX_STANDARD 14)
+set(OpenCV_DIR "C:\\opencv\\vs-x64-build")
 
 find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
