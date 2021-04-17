@@ -25,9 +25,8 @@ int main() {
         flip(frame, frame, 1);
         imshow("Video", frame);
 
-        char c = (char)waitKey(10);
-
-        // Press q to exit from window
+        // Press q to exit from window. Also this provides a needed delay between displaying each frame.
+        char c = (char)waitKey(30);
         if( c == 27 || c == 'q' || c == 'Q' )
             break;
     }
