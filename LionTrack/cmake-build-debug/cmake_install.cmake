@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack
+# Install script for directory: D:/College/Junior Year/SWENG 452/FinalProjectGit2/finalproject-team-not-7/LionTrack
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/College/Junior Year/SWENG 452/FinalProjectGit2/finalproject-team-not-7/LionTrack/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

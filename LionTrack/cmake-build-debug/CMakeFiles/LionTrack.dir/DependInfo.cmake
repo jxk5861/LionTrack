@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/main.cpp" "C:/Users/Kevin Wang/Documents/College/finalproject-team-not-7/LionTrack/cmake-build-debug/CMakeFiles/LionTrack.dir/main.cpp.obj"
+  "D:/College/Junior Year/SWENG 452/FinalProjectGit2/finalproject-team-not-7/LionTrack/main.cpp" "D:/College/Junior Year/SWENG 452/FinalProjectGit2/finalproject-team-not-7/LionTrack/cmake-build-debug/CMakeFiles/LionTrack.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
