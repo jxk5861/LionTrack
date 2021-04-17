@@ -1,4 +1,5 @@
 #include <iostream>
+#include <filesystem>
 #include <vector>
 #include <map>
 #include <sys/time.h>
@@ -11,9 +12,12 @@
 #include <opencv2/face.hpp>
 #include <opencv2/core/mat.hpp>
 #include <fstream>
+#include <cstring>
 
 using namespace std;
 using namespace cv;
+using namespace cv::face;
+using filesystem::directory_iterator;
 
 int main() {
     // Now we train a model to recognize the friendly faces stored in the dataset.
