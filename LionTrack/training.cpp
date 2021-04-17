@@ -1,36 +1,26 @@
 #include <iostream>
+#include <vector>
+#include <sys/time.h>
+#include <string>
 #include <opencv2/core/core.hpp>
 #include <opencv2/objdetect.hpp>
 #include <opencv2/highgui.hpp>
+#include <opencv2/imgproc.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <fstream>
 
+using namespace std;
 using namespace cv;
 
 int main() {
-    VideoCapture capture = VideoCapture(0);
-    capture.set(CAP_PROP_FRAME_WIDTH, 640);
-    capture.set(CAP_PROP_FRAME_HEIGHT, 480);
+    // Now we train a model to recognize the friendly faces stored in the dataset.
 
-    capture.open(0);
-    if(!capture.isOpened()){
-        return 1;
-    }
+    // Load a the downloaded opencv cascade https://github.com/opencv/opencv/tree/master/data/haarcascades
+    CascadeClassifier faceCascade("../opencv/haarcascades/haarcascade_frontalface_default.xml");
 
-    Mat frame;
-    while(true){
-        auto ret = (capture >> frame);
-        if(frame.empty()) {
-            break;
-        }
 
-        flip(frame, frame, 1);
-        imshow("Video", frame);
 
-        // Press q to exit from window. Also this provides a needed delay between displaying each frame.
-        char c = (char)waitKey(30);
-        if( c == 27 || c == 'q' || c == 'Q' )
-            break;
-    }
-
-    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
+
+
