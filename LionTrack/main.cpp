@@ -15,14 +15,14 @@ int main() {
         return 1;
     }
 
-    Mat frame, flipped;
+    Mat frame;
     while(true){
         auto ret = (capture >> frame);
         if(frame.empty()) {
             break;
         }
 
-        flip(frame, flipped, 1);
+        flip(frame, frame, 1);
         imshow("Video", frame);
 
         char c = (char)waitKey(10);
