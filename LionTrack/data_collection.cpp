@@ -28,7 +28,7 @@ int main() {
 
     Mat frame, gray;
     int face_count = 0;
-    auto face_id = "William";// change depending on person being data-mined.
+    auto face_id = "Kevin";// change depending on person being data-mined.
     int startTime = 0, finishTime = 0;
     ofstream logfile;
 
@@ -88,7 +88,7 @@ int main() {
         if( c == 27 || c == 'q' || c == 'Q' ) {
             break;
         }
-        if(face_count > 50){
+        if(face_count > 500){
             break;
         }
     }
