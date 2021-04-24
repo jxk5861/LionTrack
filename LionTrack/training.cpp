@@ -47,9 +47,7 @@ int main() {
     {
         //User.William.1.jpg
         image_path = file.path();
-        cout << image_path << endl;
         name_start = image_path.find_last_of('/');
-        cout << "File name: " << image_path << endl;
         string image_path_end = image_path.substr(name_start);
 
         name_start = image_path_end.find_first_of('.');
@@ -63,24 +61,33 @@ int main() {
 
         Mat face = imread(image_path, IMREAD_GRAYSCALE);
 //        cout << face.size().width << " " << face.size().height << endl;
-        dataset_faces.push_back(face);
-        dataset_face_labels.push_back(name_to_id[face_id]);
-//        vector<Rect> faces;
-//        faceCascade.detectMultiScale(img, faces);
-//
-//        for(Rect face : faces){
-//            dataset_faces.push_back(face);
-//            dataset_face_labels.push_back(name_to_id[face_id]);
-//        }
+//        dataset_faces.push_back(face);
+//        dataset_face_labels.push_back(name_to_id[face_id]);
+        vector<Rect> faces;
+
+        vector<Rect> detected_faces;
+        faceCascade.detectMultiScale(face, detected_faces);
+
+        for(Rect r : detected_faces){
+            int x = r.x;
+            int y = r.y;
+            int w = r.width;
+            int h = r.height;
+
+            Mat detected_face_grayscale = face.colRange(x, x + w).rowRange(y, y + h);
+
+            dataset_faces.push_back(face);
+            dataset_face_labels.push_back(name_to_id[face_id]);
+
+            cout << "Adding face: " << face_id << " (" << name_to_id[face_id] << ") File: " << image_path << endl;
+        }
     }
 //    cout << dataset_faces.size() << " " << dataset_face_labels.size() << endl;
 
     recognizer->train(dataset_faces, dataset_face_labels);
     recognizer->write("../trainer/trainer.yml");
 
-    printf("%lu faces trained\n", dataset_faces.size());
+    printf("%lu faces trained (%lu labels)\n", dataset_faces.size(), dataset_face_labels.size());
 
     return 0;
 }
-
-

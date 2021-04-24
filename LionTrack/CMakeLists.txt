@@ -10,6 +10,6 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 set(OpenCV_LIBS opencv_core opencv_imgproc opencv_highgui opencv_imgcodecs opencv_objdetect opencv_face)
 
 # Change the .cpp file depending on which c++ class is used.
-add_executable(LionTrack training.cpp)
+add_executable(LionTrack face_recognizer.cpp)
 
 target_link_libraries(LionTrack ${OpenCV_LIBS})
