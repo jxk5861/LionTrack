@@ -86,7 +86,7 @@ int main(){
 
             //confidence = 100 - confidence;
 
-            if(confidence < 60){
+            if(confidence < 50){
                 stream << id_to_name[id];
 //                cout << id_to_name[id] << " confidence: " << 100 - confidence << endl;
             } else {
