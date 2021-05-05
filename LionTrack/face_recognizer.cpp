@@ -86,7 +86,7 @@ int main(){
 
             //confidence = 100 - confidence;
 
-            if(confidence < 30){
+            if(confidence < 50){
                 stream << id_to_name[id];
 //                cout << id_to_name[id] << " confidence: " << 100 - confidence << endl;
             } else {
@@ -112,7 +112,7 @@ int main(){
             int totalTime = finishTime.count() - startTime.count();
             logfile << "Response time: " << totalTime << "ms";
 
-            if(totalTime < 120*face_count_min)
+            if(totalTime < 50*face_count_min)
             {
                 logfile << " Deadline Met" << endl;
             }

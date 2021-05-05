@@ -1,0 +1,3 @@
+/home/pi/Downloads/finalproject-team-not-7-main/LionTrack/CMakeFiles/rebuild_cache.dir
+/home/pi/Downloads/finalproject-team-not-7-main/LionTrack/CMakeFiles/LionTrack.dir
+/home/pi/Downloads/finalproject-team-not-7-main/LionTrack/CMakeFiles/edit_cache.dir

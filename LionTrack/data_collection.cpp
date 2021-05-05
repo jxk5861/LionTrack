@@ -88,7 +88,7 @@ int main() {
         if( c == 27 || c == 'q' || c == 'Q' ) {
             break;
         }
-        if(face_count > 500){
+        if(face_count > 100){
             break;
         }
     }
