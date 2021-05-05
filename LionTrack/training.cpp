@@ -66,6 +66,7 @@ int main() {
         vector<Rect> faces;
 
         vector<Rect> detected_faces;
+        // Detect faces
         faceCascade.detectMultiScale(face, detected_faces);
 
         for(Rect r : detected_faces){
@@ -82,8 +83,8 @@ int main() {
             cout << "Adding face: " << face_id << " (" << name_to_id[face_id] << ") File: " << image_path << endl;
         }
     }
-//    cout << dataset_faces.size() << " " << dataset_face_labels.size() << endl;
 
+    // Build the model from the collected data.
     recognizer->train(dataset_faces, dataset_face_labels);
     recognizer->write("../trainer/trainer.yml");
 

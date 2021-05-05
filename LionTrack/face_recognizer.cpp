@@ -17,37 +17,51 @@ using namespace face;
 using namespace chrono;
 
 int main(){
+    // Create a LBPH face recognizer. This is a good recognizer for our type of application.
     Ptr<LBPHFaceRecognizer> recognizer = face::LBPHFaceRecognizer::create();
     ofstream logfile;
+
+    // Open the logfile for logging when deadlines are met or missed.
     logfile.open("logfile.txt", ios_base::app);
 
-    recognizer->read("../trainer/trainer.yml");//***Going to need a trainer folder and trainer.yml file with it
+    // Read the training model in from the /trainer/trainer.yml directory. This is the model used to recognize friendly faces.
+    recognizer->read("../trainer/trainer.yml");
 
+    // Create the face cascade for detecting where a face is on the camera. (any face, not just friendly ones).
     CascadeClassifier faceCascade("../opencv/haarcascades/haarcascade_frontalface_default.xml");
 
     map<int, string> id_to_name = { {0, "Kevin"}, {1, "Jacob"} };
 
+    // Initialize the video capture from usb.
     VideoCapture capture = VideoCapture(0);
     capture.set(CAP_PROP_FRAME_WIDTH, 640);
     capture.set(CAP_PROP_FRAME_HEIGHT, 480);
 
     capture.open(0);
+
+    // Exit if the camera is not open.
     if(!capture.isOpened()){
         return 1;
     }
 
+    // The image frame and image grayscale frame to store data to.
     Mat frame, gray;
 
     while(true){
+        // Store the current frame into the buffer.
         capture >> frame;
 
         if(frame.empty()) {
             break;
         }
 
+        // Flip the frame so it appears like a mirror.
         flip(frame, frame, 1);
+
+        // Convert the image to grayscale for image processing. The classifiers work on grayscale images.
         cvtColor(frame, gray, COLOR_BGR2GRAY);
 
+        // The list to store the faces to.
         vector<Rect> faces;
         double scaleFactor = 1.2;
         int minNeighbors = 5;
@@ -57,10 +71,13 @@ int main(){
         // Search for faces in the image.
         faceCascade.detectMultiScale(gray, faces, scaleFactor, minNeighbors, flags, minSize);
 
+        // Save the start time for determining if the deadline is met in the future.
+        // The deadline is met if the image is read, classified, and recognized in the 50ms*num_faces window.
         milliseconds startTime = duration_cast< milliseconds >(
                 system_clock::now().time_since_epoch()
         );
 
+        // Set the minimum face count.
         int face_count_min = min((int)faces.size(), 3);
 
         for(int i = 0; i < face_count_min; i++) {
@@ -79,6 +96,7 @@ int main(){
 
             int id;
             double confidence;
+            // Find the confidence that the image is a friendly face.
             recognizer->predict(detected_face_grayscale, id, confidence);
 
             string label;
@@ -98,20 +116,22 @@ int main(){
             stream << " " << id << " "  << round(100 - confidence);
             label = stream.str();
 
+            // Put the recognized face label on the image.
             cv::putText(frame, label, Point(x+5, y-5), FONT_HERSHEY_PLAIN, 1, color);
         }
 
+        // The task has finished.
         milliseconds finishTime = duration_cast< milliseconds >(
                 system_clock::now().time_since_epoch()
         );
-        //logging response time to a text file
 
-
+        // Only log data if at least one face is present.
         if(faces.size() > 0)
         {
             int totalTime = finishTime.count() - startTime.count();
             logfile << "Response time: " << totalTime << "ms";
 
+            // Determine if the deadline was met and log it.
             if(totalTime < 50*face_count_min)
             {
                 logfile << " Deadline Met" << endl;
@@ -123,6 +143,7 @@ int main(){
         }
 
 
+        // Show the frame with the draw on labels.
         imshow("detected face", frame);
 
         // Press q to exit from window. Also this provides a needed delay between displaying each frame.
