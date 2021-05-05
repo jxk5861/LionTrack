@@ -28,7 +28,7 @@ int main() {
 
     Mat frame, gray;
     int face_count = 0;
-    auto face_id = "Kevin";// change depending on person being data-mined.
+    auto face_id = "Kevin";// Change this variable depending on person being data-mined.
     int startTime = 0, finishTime = 0;
     ofstream logfile;
 
